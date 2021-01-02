@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
       textAlign: "center",
       zIndex: 1
    }
-}))
+})); 
 
 
 function Header() {
