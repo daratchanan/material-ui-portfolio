@@ -1,50 +1,35 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import { BottomNavigation, BottomNavigationAction } from "@material-ui/core"
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import BottomNavigation from "@material-ui/core/BottomNavigation";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import Facebook from "@material-ui/icons/Facebook";
+import Twitter from "@material-ui/icons/Twitter";
+import Instagram from "@material-ui/icons/Instagram";
 
-const useStyle = makeStyles({
-   root: {
-      "& .MuiButtomNavigationAction-root": {
-         minWidth: 0,
-         maxWidth: 250,
+const useStyles = makeStyles({
+  bottomNavContainer: {
+    background: "#222",
+  },
+  root: {
+    "& .MuiSvgIcon-root": {
+      fill: "tan",
+      "&:hover": {
+        fill: "tomato",
+        fontSize: "1.8rem",
       },
-      "& .MuiSvgIcon-root": {
-         fill: "tan",
-         "&:hover": {
-            fill: "tomato",
-            fontSize: "1.8rem"
-         }
-      }
-   },
-})
+    },
+  },
+});
 
-function Footer() {
+const Footer = () => {
+  const classes = useStyles();
 
-   const classes = useStyle();
-
-   return (
-      <BottomNavigation width="auto" style={{background: "#222"}}>
-         <BottomNavigationAction
-            className={classes.root}
-            style={{ padding: 0 }}
-            icon={<FacebookIcon />}
-         />
-         <BottomNavigationAction
-            className={classes.root}
-            style={{ padding: 0 }}
-            icon={<TwitterIcon />}
-         />
-         <BottomNavigationAction
-            className={classes.root}
-            style={{ padding: 0 }}
-            icon={<InstagramIcon />}
-         />
-      </BottomNavigation>
-   )
+  return (
+    <BottomNavigation className={classes.bottomNavContainer}>
+      <BottomNavigationAction icon={<Facebook />} className={classes.root} />
+      <BottomNavigationAction icon={<Twitter />} className={classes.root} />
+      <BottomNavigationAction icon={<Instagram />} className={classes.root} />
+    </BottomNavigation>
+  );
 };
-
 export default Footer;
-
