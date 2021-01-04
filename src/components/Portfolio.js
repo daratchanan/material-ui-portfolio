@@ -52,7 +52,7 @@ function Portfolio() {
          <Navbar />
          <Grid container justify="center" spacing={3}>
             {portData.map((data, idx) => 
-               <Grid item xs={12} sm={6} md={4} key={idx}>
+               <Grid item xs={12} sm={8} md={6} key={idx}>
                <Card className={classes.cardContainer}>
                   <CardActionArea>
                      <CardMedia

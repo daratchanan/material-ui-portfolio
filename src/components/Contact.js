@@ -2,6 +2,7 @@ import React from 'react';
 import SendIcon from "@material-ui/icons/Send"
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Box, Button, Grid, TextField, Typography } from '@material-ui/core';
+import Navbar from './Navbar';
 
 const useStyles = makeStyles(theme=>({
    form: {
@@ -9,6 +10,11 @@ const useStyles = makeStyles(theme=>({
       top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
+   },
+   button: {
+      marginTop: "1rem",
+      color: "tomato",
+      borderColor: "tomato"
    },
 }))
 
@@ -39,10 +45,19 @@ function Contact() {
    const classes = useStyles();
 
    return (
-      <Box component="div">
+      <Box component="div" style={{ background: "#233", height: "100vh" }}>
+         <Navbar />
          <Grid container justify="center">
             <Box component="form" className={classes.form}>
-               <Typography variant="h5">hire or contact me...</Typography>
+               <Typography variant="h5"
+               style={{
+                  color: "tomato",
+                  textAlign: "center",
+                  textTransform: "uppercase",
+               }}
+               >
+                  hire or contact me...
+               </Typography>
                <InputField
                   fullWidth={true}
                   label="Name"
@@ -72,7 +87,7 @@ function Contact() {
                   size="medium"
                />
                <br />
-               <Button variant="outlined" fullWidth={true} endIcon={<SendIcon />}>
+               <Button className={classes.button} variant="outlined" fullWidth={true} endIcon={<SendIcon />}>
                   contact me
                </Button>
             </Box>
