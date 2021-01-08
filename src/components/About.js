@@ -99,7 +99,7 @@ function About() {
             </Box>
             <Grid container justify="center" spacing={4} style={{paddingTop: "2rem"}}>
                <Grid item xs={12} sm={12} md={12} lg={3} className={classes.picture}>
-                  <img src={nat}>
+                  <img src={nat} alt="nat">
                   </img>
                </Grid>
                <Grid item xs={12} sm={12} md={12} lg={9}>

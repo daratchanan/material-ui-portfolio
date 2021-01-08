@@ -31,7 +31,7 @@ const projects = [
       name: "E-commerce",
       description: "React, Material ui, Express, mySql, Sequelize",
       image: project1,
-      link: "https://github.com/daratchanan/shopshop"
+      link: "https://github.com/daratchanan/shopshop_front"
    },
    {
       name: "Restaurant reserve",
@@ -75,7 +75,7 @@ const Portfolio = () => {
                      </CardActionArea>
                      <CardActions>
                         <IconButton aria-label="github">
-                           <Link href={project.link} style={{ color: "gray" }}>
+                           <Link href={project.link} target="_blank" style={{ color: "gray" }}>
                               <GitHubIcon fontSize="large" />
                            </Link>
                         </IconButton>
